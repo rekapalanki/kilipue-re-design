@@ -177,8 +177,8 @@ nav img {
 main {
     width: 100%;
     height: 100%;
-    background: grey url(./public/background/originals-and-credits/filip-zrnzevic-QsWG0kjPQRY-unsplash.jpg);
-    background-position: 50% 50%; 
+    background: grey url(./public/background/originals-and-credits/Reka_montazs.jpg);
+    /* background-position: 50% 50%;  */
     background-size: repeat;
     box-shadow: inset 0px 50vh 80vh 0px #fff;
 }
@@ -188,14 +188,14 @@ main {
 .section-wrapper {
     width: 100%;
     min-height: 80vh;
+    padding: 1rem 0;
     display: grid;
     grid-template-rows: repeat(1, 1fr);
     place-items: center;
 }
 
 .section-wrapper h2, 
-.section-wrapper p, 
-.section-wrapper img {
+.section-wrapper p {
     padding: 1rem;
 }
 
@@ -223,8 +223,8 @@ main {
 
 .logo-big {
     width: 250px;
-    margin: 2rem;
     border-radius: 50%;
+    margin-bottom: 2rem;
 }
 
 /* Info wrapper */
@@ -259,48 +259,16 @@ main {
 }
 
 .cards {
-    display: none;
-    /* display: grid; */
-    grid-template-columns: 225px 225px 225px;
-    grid-template-rows: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     padding: 2rem;
     margin-bottom: 2rem;
 }
 
-.card-big-1 {
-    grid-column: 1 / span 2;
-}
-
-.card-small-1 {
-    grid-column: 3 / span 1;
-}
-
-.card-small-2 {
-    grid-column: 1 / span 1;
-}
-
-.card-big-2 {
-    grid-column: 2 / span 2;
-}
-
-.card-small-3 {
-    grid-column: 1 / span 1;
-}
-.card-small-4 {
-    grid-column: 2 / span 1;
-}
-.card-small-5 {
-    grid-column: 3 / span 1;
-}
-
-.card-big-1, 
-.card-small-1,
+.card-big-1,
 .card-big-2, 
-.card-small-2,
-.card-small-3,
-.card-small-4, 
-.card-small-5 {
+.card-small {
     border: 1px solid #333;
 }
 
@@ -324,7 +292,17 @@ main {
     text-align: left;
 }
 
-/* FOOTER STYLES */
+/* Bottom shadow */
+
+/* ************************ APPLY GRADIENT TO THE BACKGROUND-COLOR ******************* */
+
+.bottomShadow {
+    height: 10vh;
+    background-color: #111;
+    box-shadow: 0px -5vh 5vh #111;
+}
+
+/* FOOTER GENERAL STYLES */
 
 footer {
     width: 100%;
@@ -343,16 +321,10 @@ footer {
     background-color: #000;
 }
 
-/* Positioning footer content */
-
-.footerLinks, .contact-me-wrapper {
-
-}
-
-/* Footer styles */
+/* Footer specific styles */
 
 .footerLinks {
-    background-color: rgba(250, 0, 0, .3);
+    /* background-color: rgba(250, 0, 0, .3); */
 }
 
 .footerLinks a {
@@ -367,7 +339,7 @@ footer {
 }
 
 .icons {
-    background-color: rgba(250, 250, 0, .3);
+    /* background-color: rgba(250, 250, 0, .3); */
 }
 
 .icons li {
@@ -375,7 +347,7 @@ footer {
 }
 
 .contact-me-wrapper {
-    background-color: rgba(0, 250, 250, .5);
+    /* background-color: rgba(0, 250, 250, .5); */
 }
 
 .made-in {
@@ -418,7 +390,20 @@ footer {
     }
 
     .cards {
+        grid-template-columns: 225px 225px 225px;
+    }
+    
+    .card-big-1 {
+        grid-column: 1 / span 2;
+    }
+    
+    .card-big-2 {
+        grid-column: 2 / span 2;
+    }
+
+    .footerContent {
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
     .footerLinks, .contact-me-wrapper {
