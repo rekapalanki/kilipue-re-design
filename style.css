@@ -37,6 +37,10 @@ h4 {
   text-transform: uppercase;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
 strong {
   font-weight: bold;
 }
@@ -316,7 +320,7 @@ main {
   border: 1px solid #333;
 }
 
-#mockup {
+#web-design {
   background: url(./mockup/real-life-photo.JPG) no-repeat;
   background-size: cover;
   filter: opacity(65%);
@@ -366,11 +370,16 @@ main {
   text-align: left;
 }
 
+.cards-description {
+  background-color: #555;
+  color: #fff;
+}
+
 /* Subpage styles */
 
 /* Header*/
 
-.subpage-header {
+.about-header {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -382,9 +391,20 @@ main {
   margin-bottom: 2.6rem;
 }
 
-.subpage-header:hover {
+.about-header:hover {
   filter: sepia(0);
   transition: 0.5s ease-in-out;
+}
+
+.projects-header {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  background: url(./public/background/pietro-rampazzo-rKmjDCIYHRg-unsplash_recolored_1800x1200.jpg)
+    no-repeat;
+  background-position: 100% 80%; /* Positioning img with CSS */
+  background-size: cover;
+  margin-bottom: 2.6rem;
 }
 
 /* Article Styles */
@@ -459,6 +479,32 @@ section ul {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+/* Projects even odd sections */
+
+.subpage-section-wrapper img {
+  width: 200px;
+  padding: 1rem;
+}
+
+.subpage-section-wrapper iframe {
+  width: 350px;
+  padding: 0.5rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a.even {
+  float: left;
+}
+
+a.odd {
+  float: right;
 }
 
 /* Bottom shadow */
