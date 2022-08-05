@@ -13,7 +13,7 @@ body {
   /* margin-bottom: 120px;           Height of the footer */
   text-align: center;
   font-size: 1rem;
-  font-family: "Cooper Black";
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 /* Typography */
@@ -43,6 +43,11 @@ p {
 
 strong {
   font-weight: bold;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
 
 /* Navbar Styles */
@@ -224,7 +229,6 @@ main {
 
 .section-wrapper p {
   max-width: 600px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Intro */
@@ -350,6 +354,19 @@ main {
   position: relative;
 }
  */
+
+#vanilla-javascript {
+  background: url(./public/projects/Shopping-cart.png) no-repeat;
+  background-size: cover;
+  filter: opacity(65%);
+}
+
+#learning-resources {
+  background: url(./public/projects/Learning-resources.png) no-repeat;
+  background-size: cover;
+  filter: opacity(55%);
+}
+
 .card-title {
   padding: 1rem;
 }
@@ -370,9 +387,19 @@ main {
   text-align: left;
 }
 
-.cards-description {
-  background-color: #555;
+.cards h3,
+.cards p {
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  ); /* Cropping img to polygon: https://bennettfeely.com/clippy/ */
 }
 
 /* Subpage styles */
@@ -402,7 +429,7 @@ main {
   width: 100%;
   background: url(./public/background/pietro-rampazzo-rKmjDCIYHRg-unsplash_recolored_1800x1200.jpg)
     no-repeat;
-  background-position: 100% 80%; /* Positioning img with CSS */
+  background-position: 100% 47.5%; /* Positioning img with CSS */
   background-size: cover;
   margin-bottom: 2.6rem;
 }
@@ -427,6 +454,11 @@ section {
 
 .opacity {
   background-color: rgba(222, 220, 223, 0.5);
+}
+
+.subpage-section-wrapper {
+  margin: auto;
+  padding-bottom: 2rem;
 }
 
 section h2,
@@ -476,7 +508,7 @@ section button {
 
 section p,
 section ul {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -485,12 +517,16 @@ section ul {
 
 .subpage-section-wrapper img {
   width: 200px;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .subpage-section-wrapper iframe {
   width: 350px;
   padding: 0.5rem;
+}
+
+.subpage-section-wrapper p {
+  padding: 0 1rem;
 }
 
 .clearfix::after {
@@ -499,10 +535,12 @@ section ul {
   display: table;
 }
 
+img.even,
 a.even {
   float: left;
 }
 
+img.odd,
 a.odd {
   float: right;
 }
